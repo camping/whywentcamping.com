@@ -1,0 +1,30 @@
+---
+extension: html
+filter:    erb
+---
+
+<% title = @page.news ? 'Camping, the News' : @page.title %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <title><%= title %></title>
+  <meta name="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body id="top">
+  <div id="wrapper">
+    <ul id="nav" class="aside">
+      <li><a href="/#top">Home</a></li>
+      <li><a href="/#getting-started">Getting Started</a></li>
+      <li><a href="/#community">Community</a></li>
+      <li><a href="/reference">Reference</a></li>
+      <li><a href="/news">News</a></li>
+    </ul>
+    
+    <h1><%= title %></h1>
+    
+    <%= @content %>
+  </div>
+</body>
+</html>

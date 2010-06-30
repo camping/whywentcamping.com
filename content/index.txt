@@ -1,0 +1,120 @@
+---
+title:       Camping, a Microframework
+dirty:       yes
+filter:
+  - erb
+  - textile
+---
+
+p=. !/img/badge.gif!
+
+p(notice). *Latest news:* "<%= latest_news %>":/news
+
+Camping is a web framework which consistently stays at less than 4kB of code.
+You can probably view the complete source code on a single page. But, you know,
+it’s so small that, if you think about it, what can it really do?
+
+The idea here is to store a complete fledgling web application in a single file
+like many small CGIs. But to organize it as a Model-View-Controller application
+like Rails does. You can then easily move it to Rails once you’ve got it going.
+
+h2. Short Example
+
+<% ruby do %>
+Camping.goes :Blog
+
+module Blog::Models
+  class Post < Base; end
+end
+
+module Blog::Controllers
+  class Index
+    def get
+      @posts = Post.all
+      render :index
+    end
+  end
+end
+
+module Blog::Views
+  def index
+    @posts.each do |post|
+      h1 post.title
+      div.content! { post.body }
+    end
+  end
+end
+<% end %>
+
+
+h2(#getting-started). Getting Started
+
+Interested yet? Great, the links below should get you started pretty quickly. If
+you're having some problems or there's something you're wondering about, don't
+hesitate to join the "community":#community.
+
+"*Installation:*":installation By using RubyGems it's just a matter of a few
+keystrokes to install Camping. There's also experimental builds if you want the
+latest features.
+
+"*The Camping Book:*":book Something about the book.
+
+"*Rules of Thumb:*":rules-of-thumb Something about the rules of thumb.
+
+"*Philosophy:*":philosophy Something about what makes Camping different.
+
+"*The Camping Wiki*":wiki Something about the wiki.
+
+"*Upgrading:*":upgrading Something about upgrading from Camping 1.5.
+
+
+h2(#community). Community
+
+Camping has a small, but helpful community and most issues are resolved quickly.
+Don't be afraid to ask; there's no point of trying to figure everything out by
+yourself when we might be able to answer it in a second. We also love to hear
+all about how _you_ are using Camping, and maybe you can teach us few tricks
+you've discovered too.
+
+If you have any feature requests or suggestions on how we can improve Camping,
+don't feel bad for throwing out suggestions without being able to contribute
+code. The ideas are just as important as the implementation, and Camping won't
+get any further without your feedback. Tell the community what you want, and
+hopefully someone is able to help you.
+
+"*Mailing List:*":mailing-list The mailing list is the most central part of the
+Camping community and you should definitly join it right away. This is both
+where the main development of Camping happens, and where questions are answered
+quickly. (There's also a "searchable archive":searchable-mailing-low if you're
+looking for a specific message.)
+
+"*#camping @ irc.freenode.net:*":irc There's also a few of us who are available
+at IRC so if you feel like chatting with us, this where you should be. Please
+hang around if no one answers you right away, and it's also very helpful if you
+leave your email so we can get back to you when we're available again.
+
+"*Issues:*":issues We also have a bug tracker where you can see all of the known (and resolved) bugs and feature requests at the moment. If you have a very specific problem, it might be a good idea to see if it's been reported before. If not, you might open a new issue or maybe ask the the mailing list.
+
+"*Source code:*":source The source code of Camping is available freely under the
+MIT licence, which pretty much give you permission to do anything you want with
+it.
+
+[installation]http://wiki.github.com/camping/camping/installation
+[book]http://camping.rubyforge.org/book.html
+[rules-of-thumb]http://wiki.github.com/camping/camping/rules-of-thumb
+[wiki]http://wiki.github.com/camping/camping/
+[philosophy]http://wiki.github.com/camping/camping/philosophy
+[upgrading]http://camping.rubyforge.org/book/51_upgrading.html
+
+[mailing-list]http://rubyforge.org/mailman/listinfo/camping-list
+[search-mailing-list]http://www.mail-archive.com/camping-list@rubyforge.org/info.html
+[irc]http://java.freenode.net/?channel=camping
+[issues]http://github.com/camping/camping/issues
+[source]http://github.com/camping/camping
+[contributing]http://wiki.github.com/camping/camping//contributing
+
+h2. What now?
+
+Hello
+
+
