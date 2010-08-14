@@ -3,11 +3,40 @@
   padding: 0;
 }
 
-body {
-  background-color: #694;
+html {
+/*  background-color: #694;*/
   color: #222;
   font-family: Utopia, Georgia, Times, serif;
   line-height: 1.6;
+}
+
+body {
+  background-color: #38261f;
+  background-image: url("/img/soil.gif");
+  background-size: 180px 180px;
+}
+
+header {
+  background-color: #e5f3f4;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-width: 660px;
+}
+
+header h1 {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin-bottom: -31px;
+  background-image: url("/img/grass.png"), url("/img/tipi.png"), url("/img/army.png");
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  background-position: center bottom, left bottom, right bottom;
+}
+
+header h1 img.badge {
+  vertical-align: -5px;
+  padding-right: 0.5ex;
 }
 
 #wrapper {
@@ -16,8 +45,9 @@ body {
   border-top: 0;
   border-bottom: 0;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 40px 30px;
   width: 600px;
+  margin-top: 80px;
 }
 
 .aside {
@@ -32,11 +62,12 @@ body {
   text-align: right;
   position: fixed !important;
   position: absolute;
-  top: 2em;
+  top: 8em;
   z-index: 0;
+  -webkit-text-size-adjust: none;
 }
 
-#nav a{
+#nav a {
   color: #fff;
   background-color: #008000;
   display: block;
@@ -167,4 +198,16 @@ pre {
 .constant, .class, .module {
     color: #630;
     font-weight: bold;
+}
+
+/* Make it less wide for smaller width devices like iThings and DoomDroids */
+@media (max-width:960px) {
+  body #nav.aside {
+    margin: 1ex auto 1em auto;
+    width: 100%;
+    text-align: center;
+    position: static !important;
+  }
+
+  body #nav.aside * { display: inline; width: auto; }
 }

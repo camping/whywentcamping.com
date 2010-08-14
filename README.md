@@ -14,7 +14,7 @@ Not everything is implemented yet; see the issue tracker.
 Usage
 -----
 
-You'll need to install the latest Webby, and then run:
+You'll need to install the latest Webby and syntax, and then run:
 
     webby autobuild
 
