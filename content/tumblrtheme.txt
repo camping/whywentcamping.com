@@ -216,7 +216,7 @@ filter:
 
       {block:Link}
       <div class="link">
-        <h3><a href="{URL}" {Target}>{Name}</a></h3>
+        <h3><a href="{URL}">{Name}</a></h3>
         <div class="link-body">
         {block:Description}{Description}{/block:Description}
         </div>
@@ -294,7 +294,6 @@ filter:
 
     {block:IfShowNotes}{PostNotes}{/block:IfShowNotes}
     {/block:Permalink}
-    </div>
     
     {block:Pagination}
     <div id="prev-next" class="autopagerize_insert_before">

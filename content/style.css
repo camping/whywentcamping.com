@@ -57,57 +57,52 @@ header h1 {
   margin-bottom: -28px;
   background-image: url("img/grass.png"), url("img/tipi.png"), url("img/army.png");
   background-repeat: repeat-x, no-repeat, no-repeat;
-  background-position: center 67px, left 13px, right 27px;
+  background-position: center 75px, left 13px, right 27px;
   font-family: ComicZineOTRegular;
   font-weight: normal;
   font-size: 40pt;
 }
 
-/* Paper texture provided by BittBox: http://www.flickr.com/photos/bittbox/2691163311/sizes/o/in/photostream/ - CC */
 #wrapper {
-  overflow: hidden;
-  margin: 80px auto 80px auto;
-  padding: 40px 0 0 0;
+  margin: 120px auto 80px auto;
   width: 660px;
 }
 
-#wrapper > h2 {
-  color: white;
-  margin: 2em;
-}
-
-#wrapper > section, #wrapper > article {
-  display: block;
-  background-color: #fcfcf9;
-  border: solid 1px #983;
-  border-top: 0;
-  border-bottom: 0;
-  padding: 10px 30px;
+/* Modded paper texture provided by BittBox:
+   http://www.flickr.com/photos/bittbox/2691163311/sizes/o/in/photostream/ - CC-BY */
+#wrapper #subwrap {
+/*  background-color: rgb(251,250,243);*/
+  -webkit-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
+  -moz-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
+  border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
+  border-width: 75px 30px 50px 30px;
+  position: relative;
+  width: 600px;
+  z-index: 100;
 }
 
 .aside {
   clear: both;
   float: left;
-  margin-left: -150px;
+  margin-left: -140px;
   width: 150px;
 }
 
 #nav {
   list-style-type: none;
-  text-align: right;
+  text-align: left;
   position: fixed !important;
   position: absolute;
-  top: 8em;
-  z-index: 0;
+  top: 12em;
+  z-index: 50;
 }
 
 #nav a {
   color: #1336a8;
-/*  background-color: #008000;*/
   background-image: url("img/ribbon.png");
   display: block;
   font-weight: normal;
-  padding: 0 0.5em;
+  padding: 0 0.5em 0 1.5em;
   font-family: TopstitchRegular;
   font-size: 15pt;
   text-decoration: none;
@@ -241,14 +236,19 @@ pre {
 }
 
 /* Make it less wide for smaller width devices like iThings and DoomDroids */
-@media (max-width:960px) {
+@media (max-width:940px), (max-height:530px) {
   body #nav.aside {
     margin: 1ex auto 1em auto;
-    width: 100%;
     text-align: center;
-    position: static !important;
+    position: absolute !important;
+    left: 0; right: 0;
+    top: 8.5em;
+    z-index: 150;
+    width: auto;
+    min-width: 660px;
   }
 
   body #nav.aside * { display: inline; width: auto; }
-  body #nav a { background-color: #008000; background-image: none; color: white; }
+  body #nav a { background-color: #008000; background-image: none; color: white; padding: 0 0.5em; font-size: 25px; }
+  body #nav #home-button { display: none; }
 }
