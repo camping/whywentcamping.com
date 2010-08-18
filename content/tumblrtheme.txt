@@ -31,38 +31,14 @@ filter:
         border-top: 1px solid {color:Description};
         padding: 2em 0 1em;
       }
-
-      .post .date {
-        border-top: 3px solid {color:Date Border};
-        border-bottom: 1px solid {color:Date Border};
-        float: left;
-        padding: .25em 1em;
-        text-align: center;
-      }
-
-      .post .date .month, .post .date .day, .post .date .time {
-        color: {color:Description};
-        display: block;
-        font-weight: normal;
-      }
-
-      .post .date .month {
-        letter-spacing: .05em;
-        text-transform: uppercase;
-      }
-
-      .post .date .day {
-        font-size: 1.3em;
-        font-weight: bold;
-      }
-
-      .post .date a, .post .date a:visited, .post .date a:active {
-        font-weight: normal;
-      }
+            
+      .date { float: right; }
+      .date .day { font-size: 1.3em; }
+      .date .year { display: none; }
+      
 
       .post .regular, .post .quote, .post .link, .post .conversation,
       .post .photo, .post .video, .post .audio {
-        margin-left: 7em;
         padding: 0;
       }
 
@@ -105,27 +81,11 @@ filter:
       }
 
       /* Previous and Next Links */
-      #prev-next {
-        margin-left: 7em;
-        padding: 1.5em 0 3em;
-      }
-
-      #prev {
-        margin-right: 1.5em;
-      }
-
-      #next {
-        margin-left: 1.5em;
-      }
-
-      #footer {
-        border-top: 1px solid {color:Description};
-        font-size: .85em;
-      }
-
-      #footer a, #footer a:active, #footer a:visited {
-        color: {color:Title};
-      }
+      #prev-next { margin-left: 7em; padding: 1.5em 0 3em; }
+      #prev { margin-right: 1.5em; }
+      #next { margin-left: 1.5em; }
+      #footer { border-top: 1px solid {color:Description}; font-size: .85em; }
+      #footer a, #footer a:active, #footer a:visited { color: {color:Title}; }
 
       #footer ul {
         list-style: none;
@@ -134,26 +94,17 @@ filter:
         text-align: center;
       }
 
-      #footer ul li {
-        display: inline;
-        margin: 0.5em;
-      }
+      #footer ul li { display: inline; margin: 0.5em; }
 
-    .query { font-weight: bold; }
-
-      .regular img {
-          max-width: 100%;
-      }
+      .query { font-weight: bold; }
+      .regular img { max-width: 100%; }
 
       #disqus_thread, ol.notes {
-          width: 448px;
-          margin: 30px 0 30px 112px;
+        width: 448px;
+        margin: 30px 0 30px 112px;
       }
 
-          ol.notes {
-              list-style-type: none;
-          }
-
+      ol.notes { list-style-type: none; }
       .search_query { font-weight: bold; }
 
       /* Tags */
@@ -170,35 +121,35 @@ filter:
     
     {block:SearchPage}
     <section><div id="searchresultcount">
-        {block:SearchResults}
-            <p>{lang:Your search for SearchQuery returned SearchResultCount results 2}.</p>
-        {/block:SearchResults}
-        
-        {block:NoSearchResults}
-            <p>{lang:No search results for SearchQuery 2}.</p>
-        {/block:NoSearchResults}
+      {block:SearchResults}
+        <p>{lang:Your search for SearchQuery returned SearchResultCount results 2}.</p>
+      {/block:SearchResults}
+      
+      {block:NoSearchResults}
+        <p>{lang:No search results for SearchQuery 2}.</p>
+      {/block:NoSearchResults}
     </div></section>
     {/block:SearchPage}
     
     {block:TagPage}
     <section><div id="tagpageblurb">
-        <p>{lang:Posts tagged Tag 2}</p>
+      <p>{lang:Posts tagged Tag 2}</p>
     </div></section>
     {/block:TagPage}
     
     {block:Posts}
-    {block:Title}<h2>{Title}</h2>{/block:Title}
     <article class="post">
       {block:NewDayDate}
       <div class="date">
         <span class="month">{ShortMonth}</span>
         <span class="day">{DayOfMonth}</span>
+        <span class="year">{Year}</span>
       </div>
       {/block:NewDayDate}
       
       {block:Text}
-      <div class="regular">
-        {block:Title}<h3>{Title}</h3>{/block:Title}
+      <div class="regular guts">
+        {block:Title}<h2>{Title}</h2>{/block:Title}
         {Body}
       </div>
       <div class="post-footer">
@@ -206,7 +157,7 @@ filter:
       {/block:Text}
 
       {block:Quote}
-      <div class="quote">
+      <div class="quote guts">
         <span class="words">&#0147;{Quote}&#0148;</span>
         {block:Source}<span class="source">{Source}</span>{/block:Source}
       </div>
@@ -215,8 +166,8 @@ filter:
       {/block:Quote}
 
       {block:Link}
-      <div class="link">
-        <h3><a href="{URL}">{Name}</a></h3>
+      <div class="link guts">
+        <h2><a href="{URL}">{Name}</a></h2>
         <div class="link-body">
         {block:Description}{Description}{/block:Description}
         </div>
@@ -226,8 +177,8 @@ filter:
       {/block:Link}
     
       {block:Chat}
-      <div class="conversation">
-        {block:Title}<h3>{Title}</h3>{/block:Title}
+      <div class="conversation guts">
+        {block:Title}<h2>{Title}</h2>{/block:Title}
         <ul>
           {block:Lines}
           <li>
@@ -241,7 +192,7 @@ filter:
       {/block:Chat}
 
       {block:Photo}
-      <div class="photo">
+      <div class="photo guts">
         {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
         {block:Caption}<span class="caption">{Caption}</span>{/block:Caption}
       </div>
@@ -250,7 +201,7 @@ filter:
       {/block:Photo}
 
       {block:Video}
-      <div class="video">
+      <div class="video guts">
         {Video-400}
         {block:Caption}<span class="caption">{Caption}</span>{/block:Caption}
       </div>
@@ -259,7 +210,7 @@ filter:
       {/block:Video}
       
       {block:Audio}
-      <div class="audio">
+      <div class="audio guts">
         {AudioPlayerGrey}
         {block:Caption}<span class="caption">{Caption}</span>{/block:Caption}
       </div>
