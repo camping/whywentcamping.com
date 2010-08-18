@@ -2,21 +2,18 @@
 extension: html
 filter:    erb
 ---
-
-<% title = @page.news ? 'Camping, the News' : @page.title %>
-
 <!DOCTYPE html>
-<html>
+<html><% title = @page.news ? 'Camping, the News' : @page.title %>
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/style.css">
   <title><%= title %></title>
-  <link rel="icon apple-touch-icon" href="/img/badge.gif">
+  <link rel="icon" href="/img/badge.gif">
   <meta name="viewport" content="width=660">
 </head>
 <body>
   <header id="top">
-    <h1><img src="/img/badge.gif" width="32" height="32" class="badge"><%= title %></h1>
+    <h1><%= title %></h1>
   </header>
   <div id="wrapper">
     <ul id="nav" class="aside">

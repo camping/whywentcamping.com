@@ -6,6 +6,7 @@ filter:
   - textile
 ---
 
+<section>
 p=. !/img/badge.gif!
 
 p(notice). *Latest news:* "<%= latest_news %>":/news
@@ -17,9 +18,11 @@ it’s so small that, if you think about it, what can it really do?
 The idea here is to store a complete fledgling web application in a single file
 like many small CGIs. But to organize it as a Model-View-Controller application
 like Rails does. You can then easily move it to Rails once you’ve got it going.
+</section>
 
 h2. Short Example
 
+<section>
 <% ruby do %>
 Camping.goes :Blog
 
@@ -45,10 +48,12 @@ module Blog::Views
   end
 end
 <% end %>
+</section>
 
 
 h2(#getting-started). Getting Started
 
+<section>
 Interested yet? Great, the links below should get you started pretty quickly. If
 you're having some problems or there's something you're wondering about, don't
 hesitate to join the "community":#community.
@@ -66,10 +71,12 @@ latest features.
 "*The Camping Wiki*":wiki Something about the wiki.
 
 "*Upgrading:*":upgrading Something about upgrading from Camping 1.5.
+</section>
 
 
 h2(#community). Community
 
+<section>
 Camping has a small, but helpful community and most issues are resolved quickly.
 Don't be afraid to ask; there's no point of trying to figure everything out by
 yourself when we might be able to answer it in a second. We also love to hear
@@ -112,9 +119,10 @@ it.
 [issues]http://github.com/camping/camping/issues
 [source]http://github.com/camping/camping
 [contributing]http://wiki.github.com/camping/camping//contributing
+</section>
 
 h2. What now?
 
+<section>
 Hello
-
-
+</section>
