@@ -55,15 +55,25 @@ hesitate to join the "community":#community.
 keystrokes to install Camping. There's also experimental builds if you want the
 latest features.
 
-"*The Camping Book:*":book Something about the book.
+"*The Camping Book:*":book Completely new to Camping? The Camping Book will
+teach you all you need to know! It's still a work in progress, but there's
+plenty of content in order to get started.
 
-"*Rules of Thumb:*":rules-of-thumb Something about the rules of thumb.
+"*Rules of Thumb:*":rules-of-thumb A few best-practice tips for your Camping
+apps. You don't have to follow them, but it often makes your app much more
+easier to write and maintain.
 
-"*Philosophy:*":philosophy Something about what makes Camping different.
+"*Philosophy:*":philosophy When there's already Rails, Sinatra, Ramaze, Merb
+and what-not, I guess you're wondering what makes Camping so much different.
+The main difference is probably our philosophy, which is quite different than
+many other frameworks.
 
-"*The Camping Wiki*":wiki Something about the wiki.
+"*The Camping Wiki*":wiki The Camping Wiki contains a growing number of
+useful tips for Camping development.
 
-"*Upgrading:*":upgrading Something about upgrading from Camping 1.5.
+"*Upgrading:*":upgrading Already have a Camping app running on 1.5 or 2.0?
+Don't worry, by following these instructions, you should be able to upgrade
+in no time!
 
 
 h2(#community). Community
@@ -91,11 +101,19 @@ at IRC so if you feel like chatting with us, this where you should be. Please
 hang around if no one answers you right away, and it's also very helpful if you
 leave your email so we can get back to you when we're available again.
 
-"*Issues:*":issues We also have a bug tracker where you can see all of the known (and resolved) bugs and feature requests at the moment. If you have a very specific problem, it might be a good idea to see if it's been reported before. If not, you might open a new issue or maybe ask the the mailing list.
+"*Issues:*":issues We also have a bug tracker where you can see all of the
+known (and resolved) bugs and feature requests at the moment. If you have a
+very specific problem, it might be a good idea to see if it's been reported
+before. If not, you might open a new issue or maybe ask the the mailing list.
 
 "*Source code:*":source The source code of Camping is available freely under the
 MIT licence, which pretty much give you permission to do anything you want with
 it.
+
+"*Contributing*":contributing Interested in contributing to Camping, either
+by writing code, documentation or helping people? Everyone are welcome, and
+we'll easily give you access to both the wiki, the repo, the homepage and
+pretty much _everything_ if you want to help.
 
 [installation]http://wiki.github.com/camping/camping/installation
 [book]http://camping.rubyforge.org/book.html
@@ -109,8 +127,4 @@ it.
 [irc]http://java.freenode.net/?channel=camping
 [issues]http://github.com/camping/camping/issues
 [source]http://github.com/camping/camping
-[contributing]http://wiki.github.com/camping/camping//contributing
-
-h2. What now?
-
-Hello
+[contributing]http://wiki.github.com/camping/camping/contributing
