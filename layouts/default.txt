@@ -2,7 +2,7 @@
 extension: html
 filter:    erb
 ---
-<!DOCTYPE html><% own_domain = "http://whitebook.mooo.com" %>
+<!DOCTYPE html><% own_domain = "" %>
 <html><% title = @page.news ? 'Camping, the News' : @page.title %>
 <head>
   <meta charset="utf-8">
