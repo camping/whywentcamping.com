@@ -22,6 +22,17 @@
 	font-style: normal;
 }
 
+/* Modded version of Comic Zine OT, modded by Jenna 'Bluebie' Fox, to just be the fills. */
+@font-face {
+	font-family: 'ComicZineOTColorFill';
+	src: url('comiczineotcolorfill-webfont.eot');
+	src: local('☺'), url('typefaces/comiczineotcolorfill-webfont.woff') format('woff'),
+	     url('typefaces/comiczineotcolorfill-webfont.ttf') format('truetype'),
+	     url('typefaces/comiczineotcolorfill-webfont.svg#webfonth7tyJalr') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 * {
   margin: 0;
@@ -55,13 +66,18 @@ header {
 header h1 {
   padding-top: 30px;
   margin-bottom: -28px;
-  background-image: url("img/grass.png"), url("img/tipi.png"), url("img/army.png");
-  background-repeat: repeat-x, no-repeat, no-repeat;
-  background-position: center 75px, left 13px, right 27px;
-  font-family: ComicZineOTRegular;
   font-weight: normal;
   font-size: 40pt;
 }
+
+header h1.fill {
+  font-family: ComicZineOTColorFill; color: #ffcc66;
+  background-image: url("img/grass.png"), url("img/tipi.png"), url("img/army.png");
+  background-repeat: repeat-x, no-repeat, no-repeat;
+  background-position: center 75px, left 13px, right 27px;
+}
+
+header h1.outline { font-family: ComicZineOTRegular; color: black; position: absolute; width: 100%; top: 0; }
 
 #wrapper {
   margin: 120px auto 80px auto;
@@ -157,8 +173,16 @@ h1 {
 
 h2 {
   border-bottom: solid 1px #BBB;
-  font-size: 1.4em;
-  font-weight: bold;
+/*  display: inline-block;
+  font-family: TopstitchRegular;
+  color: #8ba066;
+  font-size: 30px;
+  -webkit-border-image: url("img/purple-stitched-button.png") 27 166 34 36 round stretch;
+  border-width: 27px 166px 34px 36px;
+  padding: -20px -130px 0 0;
+  height: 33px;
+  font-weight: normal;
+  text-shadow: 0.5px 2px 3px rgba(0,0,0, 1), -0.5px -1px 1px rgba(255,255,255, 0.5);*/
 }
 
 h2.post-heading {
@@ -175,7 +199,7 @@ h2 a:hover {
   text-decoration: underline;
 }
 
-h1, h2, h3 {
+h1, /*h2,*/ h3 {
   margin-bottom: 0.5em;
 }
 

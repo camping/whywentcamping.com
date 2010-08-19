@@ -13,7 +13,8 @@ filter:    erb
 </head>
 <body>
   <header id="top">
-    <h1><%= title %></h1>
+    <h1 class="fill"><%= title %></h1>
+    <h1 class="outline"><%= title %></h1>
   </header>
   <div id="wrapper">
     <ul id="nav" class="aside">
