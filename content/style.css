@@ -91,7 +91,7 @@ header h1.outline { font-family: ComicZineOTRegular; color: black; position: abs
   -webkit-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
   -moz-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
   border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
-  -o-border-image: url("img/paper.png") 75 30 50 30 stretch stretch; /*Opera*/
+  -o-border-image: url("img/paper.png") 75 30 50 30 stretch stretch;
   border-width: 75px 30px 50px 30px;
   position: relative;
   width: 600px;
